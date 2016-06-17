@@ -269,6 +269,6 @@ var AnalyticsAdapter = new function(){
     };
 
     return this;
-}
+};
 
 module.exports = AnalyticsAdapter;
