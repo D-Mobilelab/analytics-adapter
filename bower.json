@@ -1,0 +1,29 @@
+{
+  "name": "AnalyticsAdapter",
+  "description": "description of AnalyticsAdapter",
+  "main": [
+    "dist/dist.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/*",
+    "!dist/**/*",
+    "!src/**/*",
+    "!CHANGELOG",
+    "!README.md",
+    "!bower.json"
+  ],
+  "keywords": [],
+  "authors": [],
+  "homepage": "https://github.com/D-Mobilelab/AnalyticsAdapter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/D-Mobilelab/AnalyticsAdapter.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": false
+}
