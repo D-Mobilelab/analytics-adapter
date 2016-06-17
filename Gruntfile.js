@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     ****         SINGLE TASKS         ****
     *************************************/
 
-    var versionString = grunt.file.readJSON('bower.json').version;
+    var versionString = grunt.file.readJSON('package.json').version;
     var version = versionString.split(".");
     var major = parseInt(version[0]), minor = parseInt(version[1]), patch = parseInt(version[2]);
     var versionMajor = (major+1) + ".0.0";
