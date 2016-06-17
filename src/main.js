@@ -3,7 +3,7 @@
 * @name AnalyticsAdapter
 *
 * @description
-* Adapter for Analytics used in web applications
+* Adapter for Google Analytics 
 */
 var AnalyticsAdapter = new function(){
 
@@ -49,7 +49,7 @@ var AnalyticsAdapter = new function(){
      *
      * # Custom Dimensions
      * In analytics initialization phase, you have to define all custom dimensions 
-     * that you will use in application.
+     * that you will use in your applications.
      *
      * ***Init method doesn't set custom dimension on Google Analytics, it only saves 
      * custom dimension for future use (for example in event tracking).***
@@ -91,10 +91,10 @@ var AnalyticsAdapter = new function(){
 
     /**
      * @ngdoc function
-     * @name init
+     * @name setId
      * @methodOf AnalyticsAdapter
      *
-     * @description Set analytics user id
+     * @description Set Analytics user id
      *
      * @param {string} id user id
      */
@@ -112,7 +112,7 @@ var AnalyticsAdapter = new function(){
 
     /**
      * @ngdoc function
-     * @name init
+     * @name setDimension
      * @methodOf AnalyticsAdapter
      *
      * @description 
@@ -127,7 +127,7 @@ var AnalyticsAdapter = new function(){
      * and, after, you have to use same custom dimension name.
      *
      * For example, in the following code, I set *UserStatus* on slot number 1 and 
-     * I assigned it value *logged*:
+     * I assigned it the *logged* value :
      * <pre>
      * // before, I save UserStatus custom dimension with slot "1"
      * Analytics.init({
@@ -136,7 +136,7 @@ var AnalyticsAdapter = new function(){
      *     }
      * });
      *   
-     * // after, I set custom dimension with value "logged"
+     * // after, I set custom dimension with the *logged* value:
      * AnalyticsAdapter.setDimension({
      *     'UserStatus' : 'logged'
      * });
@@ -162,7 +162,7 @@ var AnalyticsAdapter = new function(){
 
     /**
      * @ngdoc function
-     * @name init
+     * @name trackPage
      * @methodOf AnalyticsAdapter
      *
      * @description To track a pageview
@@ -205,7 +205,7 @@ var AnalyticsAdapter = new function(){
 
     /**
      * @ngdoc function
-     * @name init
+     * @name trackEvent
      * @methodOf AnalyticsAdapter
      *
      * @description Track an event
@@ -231,7 +231,7 @@ var AnalyticsAdapter = new function(){
      *     }
      * });
      * </pre>
-     * Note: the custom dimension (in this example Valuable) has to defined in init method before and you have to use same custom dimension name.
+     * **Note**: the custom dimension (in this example Valuable) has to defined in init method before and you have to use same custom dimension name.
      */
     this.trackEvent = function(options){
         var properties = { 
