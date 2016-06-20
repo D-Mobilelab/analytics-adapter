@@ -3,7 +3,7 @@ var AnalyticsAdapter = new function(){
 
     var dimensions = {};
     var enabled = true;
-    var logger =  { 
+    var logger = { 
         debug: function(){},
         log: function(){},
         info: function(){},
@@ -22,14 +22,6 @@ var AnalyticsAdapter = new function(){
             // get logger
             if (options.logger){
                 logger = options.logger;
-            } else {
-                logger = { 
-                    debug: function(){},
-                    log: function(){},
-                    info: function(){},
-                    warn: function(){},
-                    error: function(){}
-                };
             }
         }
 
@@ -37,7 +29,6 @@ var AnalyticsAdapter = new function(){
     };
     this.setId = function(id){
         if(id){
-
             logger.log('AnalyticsAdapter', 'set id', id);
 
             if(enabled){
@@ -118,8 +109,6 @@ var AnalyticsAdapter = new function(){
             ga('send', properties);
         }
     };
-
-    return this;
 };
 
 module.exports = AnalyticsAdapter;
