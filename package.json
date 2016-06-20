@@ -1,17 +1,29 @@
 {
-  "name": "AnalyticsAdapter",
+  "name": "analytics-adapter",
   "version": "1.0.0",
-  "description": "description of AnalyticsAdapter",
-  "keywords": [],
-  "homepage": "https://github.com/D-Mobilelab/AnalyticsAdapter",
+  "description": "Interface for Google Analytics to tracking events, pageviews and custom dimensions",
+  "keywords": [
+    "google analytics",
+    "ga",
+    "tracking",
+    "custom dimensions",
+    "javascript"
+  ],
+  "homepage": "https://github.com/D-Mobilelab/analytics-adapter",
   "bugs": {
-    "url": "https://github.com/D-Mobilelab/AnalyticsAdapter/issues"
+    "url": "https://github.com/D-Mobilelab/analytics-adapter/issues"
   },
   "license": "MIT",
-  "contributors": [],
+  "contributors": [{
+      "name": "Aurelio Merenda",
+      "email": "aurelio.merenda@buongiorno.com"
+  }, {
+      "name": "Lorenzo Mussi",
+      "email": "lorenzo.mussi@buongiorno.com"
+  }],
   "repository": {
     "type": "git",
-    "url": "git://github.com/D-Mobilelab/AnalyticsAdapter.git"
+    "url": "git://github.com/D-Mobilelab/analytics-adapter.git"
   },
   "scripts": {},
   "dependencies": {},
@@ -57,6 +69,6 @@
   "browserify": {
     "src": "main.js",
     "dist": "dist.js",
-    "global": "Animals"
+    "global": "AnalyticsAdapter"
   }
 }
