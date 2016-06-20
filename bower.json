@@ -1,6 +1,6 @@
 {
-  "name": "AnalyticsAdapter",
-  "description": "description of AnalyticsAdapter",
+  "name": "analytics-adapter",
+  "description": "Interface for Google Analytics to tracking events, pageviews and custom dimensions",
   "main": [
     "dist/dist.js"
   ],
@@ -16,12 +16,24 @@
     "!README.md",
     "!bower.json"
   ],
-  "keywords": [],
-  "authors": [],
-  "homepage": "https://github.com/D-Mobilelab/AnalyticsAdapter",
+  "keywords": [
+    "google analytics",
+    "ga",
+    "tracking",
+    "custom dimensions",
+    "javascript"
+  ],
+  "authors": [{
+      "name": "Aurelio Merenda",
+      "email": "aurelio.merenda@buongiorno.com"
+  }, {
+      "name": "Lorenzo Mussi",
+      "email": "lorenzo.mussi@buongiorno.com"
+  }],
+  "homepage": "https://github.com/D-Mobilelab/analytics-adapter",
   "repository": {
     "type": "git",
-    "url": "git://github.com/D-Mobilelab/AnalyticsAdapter.git"
+    "url": "git://github.com/D-Mobilelab/analytics-adapter.git"
   },
   "dependencies": {},
   "devDependencies": {},

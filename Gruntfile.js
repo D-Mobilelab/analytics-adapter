@@ -126,7 +126,7 @@ module.exports = function (grunt) {
             api: {
                 options: {
                     dest: '<%= docPath %>temp',
-                    startPage: '/api/main'
+                    startPage: '/api/AnalyticsAdapter'
                 },
                 // src: ['<%= docPath %>/welcome.js', '<%= srcPath %>/**/*.js'],
                 src: ['<%= srcPath %>/**/*.js'],
@@ -136,7 +136,7 @@ module.exports = function (grunt) {
             version: {
                 options: {
                     dest: '<%= docPath %><%= newVersion %>',
-                    startPage: '/version/main'
+                    startPage: '/version/AnalyticsAdapter'
                 },
                 // src: ['<%= docPath %>/welcome.js', '<%= srcPath %>/**/*.js'],
                 src: ['<%= srcPath %>/**/*.js'],
