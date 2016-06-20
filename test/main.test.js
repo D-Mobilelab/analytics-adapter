@@ -23,7 +23,6 @@ beforeEach(function(){
 	AnalyticsAdapter.init({
 		dimensions: dimensions,
 		enabled: true,
-		verbose: true,
 		logger: logger
 	});
 });
@@ -123,6 +122,7 @@ describe('trackPage -', function(){
 });
 
 describe('trackEvent -', function(){
+
 	it('method track a GA event', function(){
 		AnalyticsAdapter.trackEvent({
 			category: 'Sport',
@@ -169,3 +169,4 @@ describe('trackEvent -', function(){
 		});
 	})
 });
+

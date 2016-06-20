@@ -1,6 +1,5 @@
 AnalyticsAdapter.init({
 	enabled: true,
-	verbose: true,
 	logger: console,
 	dimensions: {
 		'UserStatus': 1,		// Session

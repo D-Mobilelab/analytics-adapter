@@ -9,8 +9,13 @@ var AnalyticsAdapter = new function(){
 
     var dimensions = {};
     var enabled = true;
-    var verbose = false;
-    var logger = console;
+    var logger =  { 
+        debug: function(){},
+        log: function(){},
+        info: function(){},
+        warn: function(){},
+        error: function(){}
+    };
 
     /**
      * @ngdoc function
@@ -21,8 +26,7 @@ var AnalyticsAdapter = new function(){
      *
      * @param {Object} options (see attributes below)
      * @param {boolean} [options.enabled=true] enable/disable tracking on Google Analytics
-     * @param {boolean} [options.verbose=false] enable/disable verbose mode, with logging
-     * @param {Object} [options.logger=Object()] logging methods to use for verbose mode (see example below)
+     * @param {Object} [options.logger=Object()] logging methods to use (see example below), if undefined there will be no logs
      * @param {Object} [options.dimensions=Object()] list of custom dimensions 
      * that will be used in the app, where
      
@@ -31,19 +35,32 @@ var AnalyticsAdapter = new function(){
      *
      * @example
      * # Logger 
-     * Logger with console
+     * Analytics with console as logger
      * <pre>
      *	AnalyticsAdapter.init({
-     *		verbose: true,
-     *  	logger: console
+     *  	enabled: true,
+     *      logger: console,
+     *      dimensions: {
+     *          'UserStatus': 1,
+     *          'AccessType': 2,
+     *          'Valuable': 5,
+     *          'Action': 8,
+     *          'PaymentType': 11
+     *      }
      *	});
      * </pre>
      *
-     * Logger with ExternalLogger
+     * Analytics with no logs
      * <pre>
      *	AnalyticsAdapter.init({
-     *		verbose: true,
-     *  	logger: ExternalLogger
+     *      enabled: true,
+     *      dimensions: {
+     *          'UserStatus': 1,
+     *          'AccessType': 2,
+     *          'Valuable': 5,
+     *          'Action': 8,
+     *          'PaymentType': 11
+     *      }
      *	});
      * </pre>
      *
@@ -61,6 +78,7 @@ var AnalyticsAdapter = new function(){
      * and "Valuable" with slot number 5):
      * <pre>
      * AnalyticsAdapter.init({
+     *     enabled: true,
      *     dimensions: {
      *         'UserStatus' : 1,
      *         'Valuable' : 5
@@ -76,17 +94,22 @@ var AnalyticsAdapter = new function(){
             if(typeof(options.enabled) !== 'undefined'){
                 enabled = options.enabled;
             }
-            if(typeof(options.verbose) !== 'undefined'){
-                verbose = options.verbose;
-            }
-            if(typeof(options.logger) !== 'undefined'){
+
+            // get logger
+            if (options.logger){
                 logger = options.logger;
+            } else {
+                logger = { 
+                    debug: function(){},
+                    log: function(){},
+                    info: function(){},
+                    warn: function(){},
+                    error: function(){}
+                };
             }
         }
 
-        if(verbose){
-            logger.log('Analytics', 'init', this);
-        }
+        logger.log('Analytics', 'init', this);
     };
 
     /**
@@ -100,9 +123,8 @@ var AnalyticsAdapter = new function(){
      */
     this.setId = function(id){
         if(id){
-            if(verbose){
-                logger.log('AnalyticsAdapter', 'set id', id);
-            }
+
+            logger.log('AnalyticsAdapter', 'set id', id);
 
             if(enabled){
                 ga('set', '&uid', id);
@@ -149,9 +171,7 @@ var AnalyticsAdapter = new function(){
                 slot = dimensions[key];
                 value = dimensionObj[key];
 
-                if(verbose){
-                    logger.log('AnalyticsAdapter', 'set dimension', slot, value);
-                }
+                logger.log('AnalyticsAdapter', 'set dimension', slot, value);
 
                 if(enabled){
                     ga('set', 'dimension' + slot, value);
@@ -194,9 +214,7 @@ var AnalyticsAdapter = new function(){
             }
         }
 
-        if(verbose){
-            logger.log('AnalyticsAdapter', 'track pageview', properties);
-        }
+        logger.log('AnalyticsAdapter', 'track pageview', properties);
 
         if(enabled){
             ga('send', properties);
@@ -259,9 +277,7 @@ var AnalyticsAdapter = new function(){
             }
         }
 
-        if(verbose){
-            logger.log('AnalyticsAdapter', 'track event', properties);
-        }
+        logger.log('AnalyticsAdapter', 'track event', properties);
 
         if(enabled){
             ga('send', properties);
