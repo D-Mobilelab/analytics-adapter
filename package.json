@@ -14,19 +14,24 @@
     "url": "https://github.com/D-Mobilelab/analytics-adapter/issues"
   },
   "license": "MIT",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Aurelio Merenda",
       "email": "aurelio.merenda@buongiorno.com"
-  }, {
+    },
+    {
       "name": "Lorenzo Mussi",
       "email": "lorenzo.mussi@buongiorno.com"
-  }],
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/D-Mobilelab/analytics-adapter.git"
   },
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "dml-js-boilerplate": "^2.0.0"
+  },
   "devDependencies": {
     "babel-eslint": "^4.1.4",
     "browserify": "^13.0.1",
