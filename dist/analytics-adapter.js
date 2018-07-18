@@ -343,4 +343,4 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 
-/* Analytics Adapter temp */
+/* Analytics Adapter 2.0.0 */
