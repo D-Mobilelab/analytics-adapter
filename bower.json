@@ -2,7 +2,7 @@
   "name": "analytics-adapter",
   "description": "Interface for Google Analytics to tracking events, pageviews and custom dimensions",
   "main": [
-    "dist/dist.js"
+    "dist/analytics-adapter.js"
   ],
   "moduleType": [
     "globals"
@@ -12,9 +12,10 @@
     "**/*",
     "!dist/**/*",
     "!src/**/*",
-    "!CHANGELOG",
+    "!CHANGELOG.md",
     "!README.md",
-    "!bower.json"
+    "!bower.json",
+    "!package.json"
   ],
   "keywords": [
     "google analytics",
@@ -25,10 +26,10 @@
   ],
   "authors": [{
       "name": "Aurelio Merenda",
-      "email": "aurelio.merenda@buongiorno.com"
+      "email": "aurelio.merenda@docomodigital.com"
   }, {
       "name": "Lorenzo Mussi",
-      "email": "lorenzo.mussi@buongiorno.com"
+      "email": "lorenzo.mussi@docomodigital.com"
   }],
   "homepage": "https://github.com/D-Mobilelab/analytics-adapter",
   "repository": {
