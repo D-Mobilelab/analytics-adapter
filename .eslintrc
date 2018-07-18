@@ -27,6 +27,8 @@
 		"no-extra-boolean-cast": 1,
 		"no-underscore-dangle": 1,
 		"no-loop-func": 1,
-		"global-require": 1
+		"global-require": 1,
+
+		"no-restricted-syntax": 1
 	}
 }

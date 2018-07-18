@@ -37,8 +37,8 @@ module.exports = new function(){
      * # Logger 
      * Analytics with console as logger
      * <pre>
-     *	AnalyticsAdapter.init({
-     *  	enabled: true,
+     *  AnalyticsAdapter.init({
+     *      enabled: true,
      *      logger: console,
      *      dimensions: {
      *          'UserStatus': 1,
@@ -47,12 +47,12 @@ module.exports = new function(){
      *          'Action': 8,
      *          'PaymentType': 11
      *      }
-     *	});
+     *  });
      * </pre>
      *
      * Analytics with no logs
      * <pre>
-     *	AnalyticsAdapter.init({
+     *  AnalyticsAdapter.init({
      *      enabled: true,
      *      dimensions: {
      *          'UserStatus': 1,
@@ -61,7 +61,7 @@ module.exports = new function(){
      *          'Action': 8,
      *          'PaymentType': 11
      *      }
-     *	});
+     *  });
      * </pre>
      *
      * # Custom Dimensions
@@ -91,7 +91,7 @@ module.exports = new function(){
             if(options.dimensions){
                 dimensions = options.dimensions;
             }
-            if(typeof(options.enabled) !== 'undefined'){
+            if(typeof options.enabled !== 'undefined'){
                 enabled = options.enabled;
             }
 
@@ -118,7 +118,7 @@ module.exports = new function(){
             logger.log('AnalyticsAdapter', 'set id', id);
 
             if(enabled){
-                ga('set', '&uid', id);
+                window.ga('set', '&uid', id);
             }
         }
     };
@@ -156,16 +156,18 @@ module.exports = new function(){
      * </pre>
      */
     this.setDimension = function(dimensionObj){
+        var key, slot, value;
         if(dimensionObj){
-            var key, slot, value;
             for(key in dimensionObj){
-                slot = dimensions[key];
-                value = dimensionObj[key];
+                if (Object.prototype.hasOwnProperty.call(dimensionObj, key)) {
+                    slot = dimensions[key];
+                    value = dimensionObj[key];
 
-                logger.log('AnalyticsAdapter', 'set dimension', slot, value);
+                    logger.log('AnalyticsAdapter', 'set dimension', slot, value);
 
-                if(enabled){
-                    ga('set', 'dimension' + slot, value);
+                    if(enabled){
+                        window.ga('set', 'dimension' + slot, value);
+                    }
                 }
             }
         }
@@ -187,8 +189,9 @@ module.exports = new function(){
      */
     this.trackPage = function(options){
         var properties = { 
-            'hitType': 'pageview'
+            hitType: 'pageview'
         };
+        var key, slot, value;
 
         if(options.page){
             properties.page = options.page;
@@ -197,18 +200,19 @@ module.exports = new function(){
             properties.title = options.title;
         }
         if(options.dimensions){
-            var key, slot, value;
             for(key in options.dimensions){
-                slot = dimensions[key];
-                value = options.dimensions[key];
-                properties['dimension' + slot] = value;
+                if (Object.prototype.hasOwnProperty.call(options.dimensions, key)) {
+                    slot = dimensions[key];
+                    value = options.dimensions[key];
+                    properties['dimension' + slot] = value;
+                }
             }
         }
 
         logger.log('AnalyticsAdapter', 'track pageview', properties);
 
         if(enabled){
-            ga('send', properties);
+            window.ga('send', properties);
         }
     };
 
@@ -244,8 +248,9 @@ module.exports = new function(){
      */
     this.trackEvent = function(options){
         var properties = { 
-            'hitType': 'event'
+            hitType: 'event'
         };
+        var key, slot, value;
 
         if(options.category){
             properties.eventCategory = options.category;
@@ -260,18 +265,19 @@ module.exports = new function(){
             properties.eventValue = options.value;
         }
         if(options.dimensions){
-            var key, slot, value;
             for(key in options.dimensions){
-                slot = dimensions[key];
-                value = options.dimensions[key];
-                properties['dimension' + slot] = value;
+                if (Object.prototype.hasOwnProperty.call(options.dimensions, key)) {
+                    slot = dimensions[key];
+                    value = options.dimensions[key];
+                    properties['dimension' + slot] = value;
+                }
             }
         }
 
         logger.log('AnalyticsAdapter', 'track event', properties);
 
         if(enabled){
-            ga('send', properties);
+            window.ga('send', properties);
         }
     };
 };
