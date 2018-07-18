@@ -1,4 +1,4 @@
-var AnalyticsAdapter = require('../src/main');
+var AnalyticsAdapter = require('../main');
 var dimensions, logger;
 
 beforeEach(function(){

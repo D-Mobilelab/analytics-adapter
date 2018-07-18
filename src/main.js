@@ -5,7 +5,7 @@
 * @description
 * Adapter for Google Analytics 
 */
-var AnalyticsAdapter = new function(){
+module.exports = new function(){
 
     var dimensions = {};
     var enabled = true;
@@ -275,5 +275,3 @@ var AnalyticsAdapter = new function(){
         }
     };
 };
-
-module.exports = AnalyticsAdapter;
