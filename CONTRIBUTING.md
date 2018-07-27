@@ -9,4 +9,4 @@ npm run start
 # or npm start
 ```
 
-now you can open [http://localhost:1234](http://localhost:1234) on your browser, to view the development server.
+now the development server is running on [http://localhost:1234](http://localhost:1234).
