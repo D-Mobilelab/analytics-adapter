@@ -4,7 +4,7 @@
   "description": "Interface for Google Analytics to track events, pageviews and custom dimensions",
   "main": "dist/analytics-adapter.js",
   "scripts": {
-    "start": "parcel example/index.html --open --out-file example.html",
+    "start": "parcel example/index.html --open --out-dir example/dist",
     "test": "TODO"
   },
   "repository": {
