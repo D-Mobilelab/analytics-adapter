@@ -5,6 +5,7 @@
   "main": "dist/analytics-adapter.js",
   "scripts": {
     "start": "parcel example/index.html --open --out-dir example/dist",
+    "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
     "test": "TODO"
   },
   "repository": {
