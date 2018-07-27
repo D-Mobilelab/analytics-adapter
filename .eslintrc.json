@@ -6,6 +6,7 @@
         "indent": ["error", 4],
         "comma-dangle": "off",
         "one-var": ["error", "consecutive"],
-        "one-var-declaration-per-line": "off"
+        "one-var-declaration-per-line": "off",
+        "eol-last": "off"
     }
 }
