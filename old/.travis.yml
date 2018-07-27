@@ -1,0 +1,27 @@
+language: node_js
+
+node_js:
+  - "6"
+
+branches:
+ only:
+   - master
+
+before_install:
+  - npm install -g gulp
+  - npm install -g npm@3
+  - npm -v
+  - node -v
+
+install:
+  - npm install
+
+after_install:
+  - ls -la node_modules/ 
+
+script:
+  - gulp webpack
+  - gulp eslint
+  - gulp test
+  - gulp coveralls
+  - gulp doc
