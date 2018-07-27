@@ -1,66 +1,65 @@
-module.exports = new function(){
-
-    var dimensions = {};
-    var enabled = true;
-    var logger = { 
+export default {
+    dimensions: {},
+    enabled: true,
+    logger: { 
         debug: function(){},
         log: function(){},
         info: function(){},
         warn: function(){},
         error: function(){}
-    };
+    },
 
-    this.init = function(options) {
+    init: function(options) {
         if(options) {
             if(options.dimensions){
-                dimensions = options.dimensions;
+                this.dimensions = options.dimensions;
             }
             if(typeof options.enabled !== 'undefined'){
-                enabled = options.enabled;
+                this.enabled = options.enabled;
             }
 
             // get logger
             if (options.logger){
-                logger = options.logger;
+                this.logger = options.logger;
             }
         }
 
-        logger.log('Analytics', 'init', this);
-    };
+        this.logger.log('Analytics', 'init', this);
+    },
 
-    this.setId = function(id){
+    setId: function(id){
         if(id){
-            logger.log('AnalyticsAdapter', 'set id', id);
+            this.logger.log('AnalyticsAdapter', 'set id', id);
 
-            if(enabled){
+            if(this.enabled){
                 window.ga('set', '&uid', id);
             }
         }
-    };
+    },
 
-    this.setDimension = function(dimensionObj){
-        var key, slot, value;
+    setDimension: function(dimensionObj){
+        let key, slot, value;
         if(dimensionObj){
             for(key in dimensionObj){
                 if (Object.prototype.hasOwnProperty.call(dimensionObj, key)) {
-                    slot = dimensions[key];
+                    slot = this.dimensions[key];
                     value = dimensionObj[key];
 
-                    logger.log('AnalyticsAdapter', 'set dimension', slot, value);
+                    this.logger.log('AnalyticsAdapter', 'set dimension', slot, value);
 
-                    if(enabled){
+                    if(this.enabled){
                         window.ga('set', 'dimension' + slot, value);
                     }
                 }
             }
         }
-    };
+    },
 
-    this.trackPage = function(options){
-        var properties = { 
+    trackPage: function(options){
+        let properties = { 
             hitType: 'pageview'
         };
-        var key, slot, value;
+        let key, slot, value;
 
         if(options.page){
             properties.page = options.page;
@@ -71,25 +70,25 @@ module.exports = new function(){
         if(options.dimensions){
             for(key in options.dimensions){
                 if (Object.prototype.hasOwnProperty.call(options.dimensions, key)) {
-                    slot = dimensions[key];
+                    slot = this.dimensions[key];
                     value = options.dimensions[key];
                     properties['dimension' + slot] = value;
                 }
             }
         }
 
-        logger.log('AnalyticsAdapter', 'track pageview', properties);
+        this.logger.log('AnalyticsAdapter', 'track pageview', properties);
 
-        if(enabled){
+        if(this.enabled){
             window.ga('send', properties);
         }
-    };
+    },
 
-    this.trackEvent = function(options){
-        var properties = { 
+    trackEvent: function(options){
+        let properties = { 
             hitType: 'event'
         };
-        var key, slot, value;
+        let key, slot, value;
 
         if(options.category){
             properties.eventCategory = options.category;
@@ -106,17 +105,17 @@ module.exports = new function(){
         if(options.dimensions){
             for(key in options.dimensions){
                 if (Object.prototype.hasOwnProperty.call(options.dimensions, key)) {
-                    slot = dimensions[key];
+                    slot = this.dimensions[key];
                     value = options.dimensions[key];
                     properties['dimension' + slot] = value;
                 }
             }
         }
 
-        logger.log('AnalyticsAdapter', 'track event', properties);
+        this.logger.log('AnalyticsAdapter', 'track event', properties);
 
-        if(enabled){
+        if(this.enabled){
             window.ga('send', properties);
         }
-    };
+    }
 };
