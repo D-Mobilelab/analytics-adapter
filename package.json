@@ -4,6 +4,7 @@
   "description": "Interface for Google Analytics to track events, pageviews and custom dimensions",
   "main": "dist/analytics-adapter.js",
   "scripts": {
+    "lint": "eslint src/",
     "start": "parcel example/index.html --open --out-dir example/dist",
     "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
     "test": "TODO"
@@ -37,6 +38,12 @@
   },
   "homepage": "https://github.com/D-Mobilelab/analytics-adapter#readme",
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
     "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.6"
   }
 }
