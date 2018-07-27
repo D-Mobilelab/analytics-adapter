@@ -20,12 +20,21 @@
     "dimensions"
   ],
   "contributors": [
-    { "name": "Aurelio Merenda", "email": "aurelio.merenda@docomogital.com" },
-    { "name": "Lorenzo Mussi", "email": "lorenzo.mussi@docomogital.com" }
+    {
+      "name": "Aurelio Merenda",
+      "email": "aurelio.merenda@docomogital.com"
+    },
+    {
+      "name": "Lorenzo Mussi",
+      "email": "lorenzo.mussi@docomogital.com"
+    }
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/D-Mobilelab/analytics-adapter/issues"
   },
-  "homepage": "https://github.com/D-Mobilelab/analytics-adapter#readme"
+  "homepage": "https://github.com/D-Mobilelab/analytics-adapter#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  }
 }
