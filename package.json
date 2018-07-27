@@ -1,6 +1,6 @@
 {
   "name": "analytics-adapter",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Interface for Google Analytics to track events, pageviews and custom dimensions",
   "main": "dist/analytics-adapter.js",
   "scripts": {
