@@ -19,5 +19,5 @@ export default (options) => {
         }
     }
 
-    global.logger.log('Analytics', 'init', global);
+    global.logger.log('AnalyticsAdapter', 'init', global);
 };

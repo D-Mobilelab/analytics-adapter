@@ -7,7 +7,7 @@
     "lint": "eslint src/",
     "start": "parcel example/index.html --open --out-dir example/dist",
     "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
-    "test": "TODO"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -38,12 +38,12 @@
   },
   "homepage": "https://github.com/D-Mobilelab/analytics-adapter#readme",
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.5.0",
     "parcel-bundler": "^1.9.7"
   },
-  "dependencies": {
-    "babel-eslint": "^8.2.6"
-  }
+  "dependencies": {}
 }
