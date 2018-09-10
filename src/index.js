@@ -1,8 +1,8 @@
-import init from './methods/init';
-import setId from './methods/setId';
-import setDimension from './methods/setDimension';
-import trackPage from './methods/trackPage';
-import trackEvent from './methods/trackEvent';
+import init from './init/init';
+import setId from './setId/setId';
+import setDimension from './setDimension/setDimension';
+import trackPage from './trackPage/trackPage';
+import trackEvent from './trackEvent/trackEvent';
 
 export default {
     init,

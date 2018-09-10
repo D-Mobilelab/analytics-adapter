@@ -1,7 +1,13 @@
 import AnalyticsAdapter from '../src/index.js';
 
+/* CUSTOM WINDOW.GA */
+const windowGA = (...args) => {
+	console.warn('window.ga calls with:', args);
+}
+
 /* INIT */
 AnalyticsAdapter.init({
+	ga: windowGA,
 	enabled: true,
 	logger: console,
 	dimensions: {

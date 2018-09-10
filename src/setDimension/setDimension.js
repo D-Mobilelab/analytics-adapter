@@ -10,7 +10,7 @@ export default (dimensionObj) => {
             global.logger.log('AnalyticsAdapter', 'set dimension', slot, value);
 
             if (global.enabled) {
-                window.ga('set', `dimension${slot}`, value);
+                global.ga('set', `dimension${slot}`, value);
             }
         });
     }

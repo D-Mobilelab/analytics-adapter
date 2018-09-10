@@ -5,7 +5,7 @@ export default (id) => {
         global.logger.log('AnalyticsAdapter', 'set id', id);
 
         if (global.enabled) {
-            window.ga('set', '&uid', id);
+            global.ga('set', '&uid', id);
         }
     }
 };

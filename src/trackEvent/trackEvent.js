@@ -29,6 +29,6 @@ export default (options) => {
     global.logger.log('AnalyticsAdapter', 'track event', properties);
 
     if (global.enabled) {
-        window.ga('send', properties);
+        global.ga('send', properties);
     }
 };
