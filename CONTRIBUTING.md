@@ -10,3 +10,11 @@ npm run start
 ```
 
 now the development server is running on [http://localhost:1234](http://localhost:1234).
+
+## Run lint
+
+You can run lint validator (ESlint) to check the quality of the code with this command
+
+```bash
+npm run lint
+```
