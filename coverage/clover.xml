@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1536593472087" clover="3.2.0">
+  <project timestamp="1536593472088" name="All files">
+    <metrics statements="112" coveredstatements="112" conditionals="84" coveredconditionals="57" methods="24" coveredmethods="14" elements="220" coveredelements="183" complexity="0" loc="112" ncloc="112" packages="7" files="7" classes="7">
+      <package name="_old.src">
+        <metrics statements="61" coveredstatements="61" conditionals="42" coveredconditionals="22" methods="11" coveredmethods="6"/>
+        <file name="main.js" path="/Users/davide.gheri/Code/analytics-adapter/_old/src/main.js">
+          <metrics statements="61" coveredstatements="61" conditionals="42" coveredconditionals="22" methods="11" coveredmethods="6"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="89" count="1" type="stmt"/>
+          <line num="90" count="12" type="cond" truecount="1" falsecount="1"/>
+          <line num="91" count="12" type="cond" truecount="1" falsecount="1"/>
+          <line num="92" count="12" type="stmt"/>
+          <line num="94" count="12" type="cond" truecount="1" falsecount="1"/>
+          <line num="95" count="12" type="stmt"/>
+          <line num="99" count="12" type="cond" truecount="1" falsecount="1"/>
+          <line num="100" count="12" type="stmt"/>
+          <line num="104" count="12" type="stmt"/>
+          <line num="116" count="1" type="stmt"/>
+          <line num="117" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="118" count="2" type="stmt"/>
+          <line num="120" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="121" count="2" type="stmt"/>
+          <line num="158" count="1" type="stmt"/>
+          <line num="160" count="5" type="cond" truecount="1" falsecount="1"/>
+          <line num="161" count="5" type="stmt"/>
+          <line num="162" count="6" type="cond" truecount="1" falsecount="1"/>
+          <line num="163" count="6" type="stmt"/>
+          <line num="164" count="6" type="stmt"/>
+          <line num="166" count="6" type="stmt"/>
+          <line num="168" count="6" type="cond" truecount="1" falsecount="1"/>
+          <line num="169" count="6" type="stmt"/>
+          <line num="190" count="1" type="stmt"/>
+          <line num="191" count="2" type="stmt"/>
+          <line num="196" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="197" count="2" type="stmt"/>
+          <line num="199" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="200" count="2" type="stmt"/>
+          <line num="202" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="203" count="2" type="stmt"/>
+          <line num="204" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="205" count="4" type="stmt"/>
+          <line num="206" count="4" type="stmt"/>
+          <line num="207" count="4" type="stmt"/>
+          <line num="212" count="2" type="stmt"/>
+          <line num="214" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="215" count="2" type="stmt"/>
+          <line num="249" count="1" type="stmt"/>
+          <line num="250" count="2" type="stmt"/>
+          <line num="255" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="256" count="2" type="stmt"/>
+          <line num="258" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="259" count="2" type="stmt"/>
+          <line num="261" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="262" count="2" type="stmt"/>
+          <line num="264" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="265" count="2" type="stmt"/>
+          <line num="267" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="268" count="2" type="stmt"/>
+          <line num="269" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="270" count="4" type="stmt"/>
+          <line num="271" count="4" type="stmt"/>
+          <line num="272" count="4" type="stmt"/>
+          <line num="277" count="2" type="stmt"/>
+          <line num="279" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="280" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <file name="global.js" path="/Users/davide.gheri/Code/analytics-adapter/src/global.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="src.init">
+        <metrics statements="10" coveredstatements="10" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+        <file name="init.js" path="/Users/davide.gheri/Code/analytics-adapter/src/init/init.js">
+          <metrics statements="10" coveredstatements="10" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+          <line num="4" count="20" type="cond" truecount="2" falsecount="0"/>
+          <line num="5" count="19" type="cond" truecount="2" falsecount="0"/>
+          <line num="6" count="13" type="stmt"/>
+          <line num="9" count="19" type="cond" truecount="2" falsecount="0"/>
+          <line num="10" count="6" type="stmt"/>
+          <line num="12" count="19" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="18" type="stmt"/>
+          <line num="21" count="19" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="13" type="stmt"/>
+          <line num="26" count="20" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.setDimension">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <file name="setDimension.js" path="/Users/davide.gheri/Code/analytics-adapter/src/setDimension/setDimension.js">
+          <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="5" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="8" count="4" type="stmt"/>
+          <line num="10" count="4" type="stmt"/>
+          <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.setId">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <file name="setId.js" path="/Users/davide.gheri/Code/analytics-adapter/src/setId/setId.js">
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="8" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.trackEvent">
+        <metrics statements="17" coveredstatements="17" conditionals="12" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <file name="trackEvent.js" path="/Users/davide.gheri/Code/analytics-adapter/src/trackEvent/trackEvent.js">
+          <metrics statements="17" coveredstatements="17" conditionals="12" coveredconditionals="8" methods="2" coveredmethods="2"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="9" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="10" count="3" type="stmt"/>
+          <line num="12" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="15" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="3" type="stmt"/>
+          <line num="18" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="19" count="3" type="stmt"/>
+          <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
+          <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.trackPage">
+        <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <file name="trackPage.js" path="/Users/davide.gheri/Code/analytics-adapter/src/trackPage/trackPage.js">
+          <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="9" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="10" count="3" type="stmt"/>
+          <line num="12" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="23" count="3" type="stmt"/>
+          <line num="25" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

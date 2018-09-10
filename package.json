@@ -7,7 +7,9 @@
     "lint": "eslint src/",
     "start": "parcel example/index.html --open --out-dir example/dist",
     "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",

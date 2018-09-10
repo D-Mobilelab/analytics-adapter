@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for _old/src/main.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">_old/src</a> main.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>61/61</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.38% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>22/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.55% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>61/61</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+* @ngdoc object
+* @name AnalyticsAdapter
+*
+* @description
+* Adapter for Google Analytics 
+*/
+module.exports = new function(){
+&nbsp;
+    var dimensions = {};
+    var enabled = true;
+    var logger = { 
+        debug: <span class="fstat-no" title="function not covered" >fu</span>nction(){},
+        log: <span class="fstat-no" title="function not covered" >fu</span>nction(){},
+        info: <span class="fstat-no" title="function not covered" >fu</span>nction(){},
+        warn: <span class="fstat-no" title="function not covered" >fu</span>nction(){},
+        error: <span class="fstat-no" title="function not covered" >fu</span>nction(){}
+    };
+&nbsp;
+    /**
+     * @ngdoc function
+     * @name init
+     * @methodOf AnalyticsAdapter
+     *
+     * @description Initialize Analytics and set up the general configurations.
+     *
+     * @param {Object} options (see attributes below)
+     * @param {boolean} [options.enabled=true] enable/disable tracking on Google Analytics
+     * @param {Object} [options.logger=Object()] logging methods to use (see example below), if undefined there will be no logs
+     * @param {Object} [options.dimensions=Object()] list of custom dimensions 
+     * that will be used in the app, where
+     
+     * - *key*: custom dimension name
+     * - *value*: slot id
+     *
+     * @example
+     * # Logger 
+     * Analytics with console as logger
+     * &lt;pre&gt;
+     *  AnalyticsAdapter.init({
+     *      enabled: true,
+     *      logger: console,
+     *      dimensions: {
+     *          'UserStatus': 1,
+     *          'AccessType': 2,
+     *          'Valuable': 5,
+     *          'Action': 8,
+     *          'PaymentType': 11
+     *      }
+     *  });
+     * &lt;/pre&gt;
+     *
+     * Analytics with no logs
+     * &lt;pre&gt;
+     *  AnalyticsAdapter.init({
+     *      enabled: true,
+     *      dimensions: {
+     *          'UserStatus': 1,
+     *          'AccessType': 2,
+     *          'Valuable': 5,
+     *          'Action': 8,
+     *          'PaymentType': 11
+     *      }
+     *  });
+     * &lt;/pre&gt;
+     *
+     * # Custom Dimensions
+     * In analytics initialization phase, you have to define all custom dimensions 
+     * that you will use in your applications.
+     *
+     * ***Init method doesn't set custom dimension on Google Analytics, it only saves 
+     * custom dimension for future use (for example in event tracking).***
+     *
+     * You have to pass a pair (custom dimension name, slot id), where slot id is the slot 
+     * of the custom dimension assigned from Google Analytics before.
+     *
+     * In this example, I set two custom dimensions ("UserStatus" with slot number 1 
+     * and "Valuable" with slot number 5):
+     * &lt;pre&gt;
+     * AnalyticsAdapter.init({
+     *     enabled: true,
+     *     dimensions: {
+     *         'UserStatus' : 1,
+     *         'Valuable' : 5
+     *     }
+     * });
+     * &lt;/pre&gt;
+     */
+    this.init = function(options) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(options.dimensions){
+                dimensions = options.dimensions;
+            }
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof options.enabled !== 'undefined'){
+                enabled = options.enabled;
+            }
+&nbsp;
+            // get logger
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (options.logger){
+                logger = options.logger;
+            }
+        }
+&nbsp;
+        logger.log('Analytics', 'init', this);
+    };
+&nbsp;
+    /**
+     * @ngdoc function
+     * @name setId
+     * @methodOf AnalyticsAdapter
+     *
+     * @description Set Analytics user id
+     *
+     * @param {string} id user id
+     */
+    this.setId = function(id){
+        if(id){
+            logger.log('AnalyticsAdapter', 'set id', id);
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(enabled){
+                window.ga('set', '&amp;uid', id);
+            }
+        }
+    };
+&nbsp;
+    /**
+     * @ngdoc function
+     * @name setDimension
+     * @methodOf AnalyticsAdapter
+     *
+     * @description 
+     * Set a user/session (not hit) custom dimension.
+     *
+     * @param {Array[Object]} dimensions where:
+     * - *key*: custom dimension name
+     * - *value*: custom dimension value
+     *
+     * @example
+     * **The custom dimension has to be defined in init method before** 
+     * and, after, you have to use same custom dimension name.
+     *
+     * For example, in the following code, I set *UserStatus* on slot number 1 and 
+     * I assigned it the *logged* value :
+     * &lt;pre&gt;
+     * // before, I save UserStatus custom dimension with slot "1"
+     * Analytics.init({
+     *     dimensions: {
+     *         'UserStatus' : 1
+     *     }
+     * });
+     *   
+     * // after, I set custom dimension with the *logged* value:
+     * AnalyticsAdapter.setDimension({
+     *     'UserStatus' : 'logged'
+     * });
+     * &lt;/pre&gt;
+     */
+    this.setDimension = function(dimensionObj){
+        var key, slot, value;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(dimensionObj){
+            for(key in dimensionObj){
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (Object.prototype.hasOwnProperty.call(dimensionObj, key)) {
+                    slot = dimensions[key];
+                    value = dimensionObj[key];
+&nbsp;
+                    logger.log('AnalyticsAdapter', 'set dimension', slot, value);
+&nbsp;
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if(enabled){
+                        window.ga('set', 'dimension' + slot, value);
+                    }
+                }
+            }
+        }
+    };
+&nbsp;
+    /**
+     * @ngdoc function
+     * @name trackPage
+     * @methodOf AnalyticsAdapter
+     *
+     * @description To track a pageview
+     *
+     * @param {object} options (see attributes below)
+     * @param {string} options.page event page (e.g. '/category/7888')
+     * @param {string} options.title event page title (e.g. 'Home Page')
+     * @param {Array[Object]} options.dimensions where:
+     * - *key*: custom dimension name
+     * - *value*: custom dimension value
+     */
+    this.trackPage = function(options){
+        var properties = { 
+            hitType: 'pageview'
+        };
+        var key, slot, value;
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.page){
+            properties.page = options.page;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.title){
+            properties.title = options.title;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.dimensions){
+            for(key in options.dimensions){
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (Object.prototype.hasOwnProperty.call(options.dimensions, key)) {
+                    slot = dimensions[key];
+                    value = options.dimensions[key];
+                    properties['dimension' + slot] = value;
+                }
+            }
+        }
+&nbsp;
+        logger.log('AnalyticsAdapter', 'track pageview', properties);
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(enabled){
+            window.ga('send', properties);
+        }
+    };
+&nbsp;
+    /**
+     * @ngdoc function
+     * @name trackEvent
+     * @methodOf AnalyticsAdapter
+     *
+     * @description Track an event
+     *
+     * @param {Object} options (see attributes below)
+     * @param {string} options.category event category
+     * @param {string} options.action event action
+     * @param {string} options.label event label
+     * @param {integer} options.value event value
+     * @param {Array[Object]} options.dimensions 
+     * - *key*: custom dimension name
+     * - *value*: custom dimension value
+     *
+     * @example
+     * &lt;pre&gt;
+     * AnalyticsAdapter.trackEvent({
+     *     category: 'UI',
+     *     action: 'open',
+     *     label: 'menu',
+     *     value: 7,
+     *     dimensions: {
+     *         'Valuable': 'yes'
+     *     }
+     * });
+     * &lt;/pre&gt;
+     * **Note**: the custom dimension (in this example Valuable) has to defined in init method before and you have to use same custom dimension name.
+     */
+    this.trackEvent = function(options){
+        var properties = { 
+            hitType: 'event'
+        };
+        var key, slot, value;
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.category){
+            properties.eventCategory = options.category;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.action){
+            properties.eventAction = options.action;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.label){
+            properties.eventLabel = options.label;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.value){
+            properties.eventValue = options.value;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(options.dimensions){
+            for(key in options.dimensions){
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (Object.prototype.hasOwnProperty.call(options.dimensions, key)) {
+                    slot = dimensions[key];
+                    value = options.dimensions[key];
+                    properties['dimension' + slot] = value;
+                }
+            }
+        }
+&nbsp;
+        logger.log('AnalyticsAdapter', 'track event', properties);
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(enabled){
+            window.ga('send', properties);
+        }
+    };
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 10 2018 17:31:12 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
