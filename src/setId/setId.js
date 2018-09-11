@@ -1,3 +1,12 @@
+/**
+ * @memberof AnalyticsAdapter
+ * @function setId
+ * @description Set Analytics user id
+ * @param {string} id - user id
+ *
+ * @example
+ * AnalyticsAdapter.setId("123rgr");
+ */
 import global from '../global';
 
 export default (id) => {

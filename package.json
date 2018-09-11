@@ -9,7 +9,8 @@
     "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
     "test": "jest",
     "test:watch": "npm run test -- --watchAll --coverage",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "docs": "jsdoc -c .jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "jest": "^23.5.0",
+    "minami": "^1.2.3",
     "parcel-bundler": "^1.9.7"
   },
   "dependencies": {},
