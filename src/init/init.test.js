@@ -26,7 +26,7 @@ test('init() should set global parameters from the given options', () => {
 
     expect(global.ga).toBe(mockGA);
     expect(global.logger).toBe(mockLogger);
-    expect(global.dimensions).toBe(dimensions)
+    expect(global.dimensions).toBe(dimensions);
 });
 
 test('init() should be enabled if enabled param is "true" as string', () => {
