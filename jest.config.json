@@ -1,0 +1,7 @@
+{
+    "collectCoverageFrom": [
+        "src/**/*.js",
+        "!src/index.js",
+        "!src/global.js"
+    ]
+}

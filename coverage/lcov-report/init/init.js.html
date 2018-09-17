@@ -69,7 +69,129 @@
 24
 25
 26
-27</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">20x</span>
@@ -95,7 +217,68 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import global from '../global';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @memberof AnalyticsAdapter
+ * @function init
+ * @description Initialize Analytics and set up the general configurations.
+ * @param {Object} options (see attributes below)
+ * @param {boolean} [options.enabled=true] enable/disable tracking on Google Analytics
+ * @param {Object} [options.logger=Object()] logging methods to use (see example below),
+ * if undefined there will be no logs
+ * @param {Object[]} [options.dimensions=Object()]
+ * @param options.dimensions[].key - custom dimensions name
+ * @param options.dimensions[].value - custom dimensions value
+ *
+ * @example
+ * // Logger
+ * // Analytics with console as logger
+ *  AnalyticsAdapter.init({
+ *      enabled: true,
+ *      logger: console,
+ *      dimensions: {
+ *          'UserStatus': 1,
+ *          'AccessType': 2,
+ *          'Valuable': 5,
+ *          'Action': 8,
+ *          'PaymentType': 11
+ *      }
+ *  });
+ *
+ * @example
+ * // Analytics with no logs
+ *  AnalyticsAdapter.init({
+ *      enabled: true,
+ *      dimensions: {
+ *          'UserStatus': 1,
+ *          'AccessType': 2,
+ *          'Valuable': 5,
+ *          'Action': 8,
+ *          'PaymentType': 11
+ *      }
+ *  });
+ *
+ * @example
+ * // Custom Dimensions
+ * // In analytics initialization phase, you have to define all custom dimensions
+ * // that you will use in your applications.
+ *
+ * // Init method doesn't set custom dimension on Google Analytics, it only saves
+ * // custom dimension for future use (for example in event tracking).
+ *
+ * // You have to pass a pair (custom dimension name, slot id), where slot id is the slot
+ * // of the custom dimension assigned from Google Analytics before.
+ *
+ * // In this example, I set two custom dimensions ("UserStatus" with slot number 1
+ * // and "Valuable" with slot number 5):
+ * AnalyticsAdapter.init({
+ *     enabled: true,
+ *     dimensions: {
+ *         'UserStatus' : 1,
+ *         'Valuable' : 5
+ *     }
+ * });
+ */
+import global from '../global';
 &nbsp;
 export default (options) =&gt; {
     if (options) {
@@ -127,7 +310,7 @@ export default (options) =&gt; {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Sep 11 2018 10:32:38 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 17 2018 16:55:09 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../prettify.js"></script>
