@@ -51,12 +51,16 @@ AnalyticsAdapter.trackEvent({
 ```bash
 npm install --save analytics-adapter
 ```
-You can found the library ready for production on <i>node_modules/analytics-adapter/dist/dist.js</i>
 
 ## Documentation
 
 To read documentation, go to:
 
-[http://d-mobilelab.github.io/analytics-adapter/1.0.0](http://d-mobilelab.github.io/analytics-adapter/1.0.0)
+[http://d-mobilelab.github.io/analytics-adapter/latest](http://d-mobilelab.github.io/analytics-adapter/latest)
 
-Replace <i>1.0.0</i> with the version of the documentation you want to read.
+or for a previous version of the documentation, go to:
+
+[http://d-mobilelab.github.io/analytics-adapter/3.0.0](http://d-mobilelab.github.io/analytics-adapter/3.0.0)
+
+replace *3.0.0* with previous version.
+

@@ -50,22 +50,17 @@ npm run test:open
 
 To create a new version:
 
-1. create a new build (it also runs lint and tests)
+1. update **CHANGELOG** file
 
-```bash
-npm run build
-```
-
-2. create a new documentation
-
-```bash
-npm run doc
-```
-
-3. commit and push **dist/** and **docs/** folders
-
-4. create a new version
+2. create a new version
 
 ```bash
 npm version [<newversion> | major | minor | patch]
+# example: npm version minor
+```
+
+3. publish new version
+
+```bash
+npm publish
 ```
