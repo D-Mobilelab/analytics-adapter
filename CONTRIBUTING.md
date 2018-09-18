@@ -1,12 +1,30 @@
 # CONTRIBUTING
 
+## Documentation
+
+To create and read the documentation of latest version
+
+```bash
+npm run doc:open
+```
+
 ## Lint
 
-To run Lint validator (ESlint), to check the quality of the code:
+To run Lint validator (ESlint):
 
 ```bash
 npm run lint
 ```
+
+## Try the library
+
+To test manually the library, run a development server:
+
+```bash
+npm run start
+```
+
+It serves files from *example/* folder.
 
 ## Test
 
@@ -25,26 +43,29 @@ npm run test:watch
 To open coverage files on the browser:
 
 ```bash
-npm run test:coverage
+npm run test:open
 ```
 
-## Documentation
+## Create a new version
 
-To read the documentation of latest version
+To create a new version:
+
+1. create a new build (it also runs lint and tests)
+
+```bash
+npm run build
+```
+
+2. create a new documentation
 
 ```bash
 npm run doc
 ```
 
-## Try the library
+3. commit and push **dist/** and **docs/** folders
 
-To test manually the library, run a development server:
+4. create a new version
 
 ```bash
-npm run start
+npm version [<newversion> | major | minor | patch]
 ```
-
-now the server is running on [http://localhost:1234](http://localhost:1234). 
-
-It serves files from *example/* folder.
-

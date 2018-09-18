@@ -7,17 +7,11 @@ branches:
  only:
    - master
 
-before_install:
-  # - npm install -g npm@3
-  - npm -v
-  - node -v
-
 install:
   - npm install
 
-# after_install:
-#   - ls -la node_modules/ 
-
 script:
+  - npm run doc
   - npm run lint
+  - npm run build
   - npm run test:coveralls

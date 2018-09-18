@@ -4,14 +4,17 @@
   "description": "Interface for Google Analytics to track events, pageviews and custom dimensions",
   "main": "dist/analytics-adapter.js",
   "scripts": {
+    "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
+    "doc": "jsdoc -c .jsdoc.json -d ./docs/${npm_package_version}/",
+    "doc:open": "npm run doc && open docs/${npm_package_version}/index.html",
     "lint": "eslint src/",
     "start": "parcel example/index.html --open --out-dir example/dist",
-    "build": "eslint src/ && parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
-    "doc": "jsdoc -c .jsdoc.json && open docs/analytics-adapter/${npm_package_version}/index.html",
     "test": "jest --config jest.config.json",
-    "test:watch": "npm test -- --watchAll",
-    "test:coverage": "npm test && open coverage/lcov-report/index.html",
-    "test:coveralls": "npm test -- --coverageReporters=text-lcov | coveralls"
+    "test:watch": "npm run test -- --watchAll",
+    "test:open": "npm run test && open coverage/lcov-report/index.html",
+    "test:coveralls": "npm run test -- --coverageReporters=text-lcov | coveralls",
+    "preversion": "npm run lint && npm run test && npm run build",
+    "version": "npm run doc"
   },
   "repository": {
     "type": "git",
