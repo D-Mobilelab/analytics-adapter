@@ -6,11 +6,12 @@
   "scripts": {
     "lint": "eslint src/",
     "start": "parcel example/index.html --open --out-dir example/dist",
-    "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
-    "test": "jest --config jest.config.json --coverage",
-    "test:watch": "jest --config jest.config.json --coverage --watchAll",
+    "build": "eslint src/ && parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
+    "doc": "jsdoc -c .jsdoc.json && open docs/analytics-adapter/${npm_package_version}/index.html",
+    "test": "jest --config jest.config.json",
+    "test:watch": "npm test -- --watchAll",
     "test:coverage": "npm test && open coverage/lcov-report/index.html",
-    "doc": "jsdoc -c .jsdoc.json && open docs/analytics-adapter/${npm_package_version}/index.html"
+    "test:coveralls": "npm test -- --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
   "homepage": "https://github.com/D-Mobilelab/analytics-adapter#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.6",
+    "coveralls": "^3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
