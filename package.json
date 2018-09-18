@@ -1,64 +1,65 @@
 {
   "name": "analytics-adapter",
-  "version": "2.0.0",
-  "description": "Interface for Google Analytics to tracking events, pageviews and custom dimensions",
-  "keywords": [
-    "google analytics",
-    "ga",
-    "tracking",
-    "custom dimensions",
-    "javascript"
-  ],
-  "homepage": "https://github.com/D-Mobilelab/analytics-adapter",
-  "bugs": {
-    "url": "https://github.com/D-Mobilelab/analytics-adapter/issues"
+  "version": "3.0.0",
+  "description": "Interface for Google Analytics to track events, pageviews and custom dimensions",
+  "main": "dist/analytics-adapter.js",
+  "scripts": {
+    "build": "parcel build src/index.js --no-minify --no-source-maps --out-file analytics-adapter.js",
+    "doc": "jsdoc -c .jsdoc.json -d ./docs/${npm_package_version}/",
+    "doc:latest": "jsdoc -c .jsdoc.json -d ./docs/latest/",
+    "doc:open": "npm run doc && open docs/${npm_package_version}/index.html",
+    "lint": "eslint src/",
+    "start": "parcel example/index.html --open --out-dir example/dist",
+    "test": "jest --config jest.config.json",
+    "test:watch": "npm run test -- --watchAll",
+    "test:open": "npm run test && open coverage/lcov-report/index.html",
+    "test:coveralls": "npm run test -- --coverageReporters=text-lcov | coveralls",
+    "preversion": "npm run lint && npm run test",
+    "version": "npm run build && npm run doc && npm run doc:latest",
+    "postversion": "git add docs/ && git commit -am 'Documentation ${npm_package_version}' && git push --follow-tags"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-Mobilelab/analytics-adapter.git"
+  },
+  "keywords": [
+    "google",
+    "analytics",
+    "ga",
+    "javascript",
+    "docomo",
+    "custom",
+    "dimensions"
+  ],
   "contributors": [
     {
       "name": "Aurelio Merenda",
-      "email": "aurelio.merenda@docomodigital.com"
+      "email": "aurelio.merenda@docomogital.com"
+    },
+    {
+      "name": "Davide Gheri",
+      "email": "davide.gheri@docomogital.com"
     },
     {
       "name": "Lorenzo Mussi",
-      "email": "lorenzo.mussi@docomodigital.com"
+      "email": "lorenzo.mussi@docomogital.com"
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/D-Mobilelab/analytics-adapter.git"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/D-Mobilelab/analytics-adapter/issues"
   },
-  "main": "dist/analytics-adapter.js",
-  "scripts": {},
-  "dependencies": {},
+  "homepage": "https://github.com/D-Mobilelab/analytics-adapter#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "del": "^2.2.2",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.3.0",
-    "gulp": "^3.9.1",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-eslint": "^3.0.1",
-    "gulp-insert": "^0.5.0",
-    "gulp-ngdocs": "^0.3.0",
-    "gulp-shell": "^0.5.2",
-    "gulp-webpack": "^1.5.0",
-    "istanbul-instrumenter-loader": "^2.0.0",
-    "istanbul-lib-coverage": "^1.1.1",
-    "jasmine-core": "^2.6.2",
-    "karma": "^1.7.0",
-    "karma-coverage": "^1.1.1",
-    "karma-coverage-istanbul-reporter": "^1.3.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-spec-reporter": "0.0.31",
-    "karma-webpack": "^2.0.2",
-    "webpack": "^2.6.1",
-    "yargs": "^8.0.1"
+    "babel-eslint": "^8.2.6",
+    "coveralls": "^3.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.5.0",
+    "jsdoc": "^3.5.5",
+    "minami": "^1.2.3",
+    "parcel-bundler": "^1.9.7"
   },
-  "engines": {
-    "node": "6.11.3"
-  },
-  "private": false
+  "dependencies": {}
 }

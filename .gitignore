@@ -1,6 +1,6 @@
-bower_components/
-npm-debug.log
-node_modules/
-test/report/
-docs/
 .DS_*
+node_modules/
+npm-debug.log
+.cache/
+example/dist/
+coverage/

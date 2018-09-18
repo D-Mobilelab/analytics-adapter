@@ -1,4 +1,13 @@
+import AnalyticsAdapter from '../src/index.js';
+
+/* CUSTOM WINDOW.GA */
+const windowGA = (...args) => {
+	console.warn('window.ga calls with:', args);
+}
+
+/* INIT */
 AnalyticsAdapter.init({
+	ga: windowGA,
 	enabled: true,
 	logger: console,
 	dimensions: {
@@ -10,8 +19,10 @@ AnalyticsAdapter.init({
 	}
 });
 
+/* SET USER ID */
 AnalyticsAdapter.setId(123456789);
 
+/* TRACK PAGEVIEW */
 AnalyticsAdapter.trackPage({
 	page: '/homepage',
 	title: 'Home Page',
@@ -21,12 +32,14 @@ AnalyticsAdapter.trackPage({
 	}
 });
 
+/* SET DIMENSION */
 AnalyticsAdapter.setDimension({
 	'UserStatus': 'logged',
 	'AccessType': 'premium',
 	'PaymentType': 'gwallet'
 });
 
+/* TRACK EVENT */
 AnalyticsAdapter.trackEvent({
 	category: 'Categoria',
 	action: 'Azione',
