@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/D-Mobilelab/analytics-adapter.svg?branch=master)](https://travis-ci.org/D-Mobilelab/analytics-adapter)
 [![Coverage Status](https://coveralls.io/repos/github/D-Mobilelab/analytics-adapter/badge.svg)](https://coveralls.io/github/D-Mobilelab/analytics-adapter)
 [![npm version](https://badge.fury.io/js/analytics-adapter.svg)](https://badge.fury.io/js/analytics-adapter)
-[![GitHub version](https://badge.fury.io/gh/D-Mobilelab%2Fanalytics-adapter.svg?v=1)](https://badge.fury.io/gh/D-Mobilelab%2Fanalytics-adapter) [![Greenkeeper badge](https://badges.greenkeeper.io/D-Mobilelab/analytics-adapter.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/D-Mobilelab/analytics-adapter.svg)](https://greenkeeper.io/)
 
 analytics-adapter is a interface for Google Analytics to tracking events, pageviews and custom dimensions
 
