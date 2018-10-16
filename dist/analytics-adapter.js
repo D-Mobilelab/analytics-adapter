@@ -110,7 +110,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = {
-    ga: window.ga,
+    ga: function ga() {},
     dimensions: {},
     enabled: true,
     logger: {
@@ -139,6 +139,8 @@ exports.default = function (options) {
     if (options) {
         if (options.ga) {
             _global2.default.ga = options.ga;
+        } else {
+            _global2.default.ga = window.ga;
         }
 
         if (options.dimensions) {
