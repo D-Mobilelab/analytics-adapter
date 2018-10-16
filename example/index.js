@@ -9,6 +9,7 @@ const windowGA = (...args) => {
 AnalyticsAdapter.init({
 	ga: windowGA,
 	enabled: true,
+	analyticsID: 'UA-40538478-2',
 	logger: console,
 	dimensions: {
 		'UserStatus': 1,		// Session

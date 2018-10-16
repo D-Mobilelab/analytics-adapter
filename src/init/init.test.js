@@ -12,6 +12,25 @@ beforeEach(() => {
     global.enabled = true;
 });
 
+test('init() should initialize GA library, if you pass analyticsID', () => {
+    const analyticsID = 'UA-123456789-1';
+
+    init({
+        ga: mockGA,
+        analyticsID
+    });
+
+    expect(mockGA).toBeCalledWith('create', analyticsID, 'auto');
+});
+
+test('init() don\'t should initialize GA library, if you don\'t pass analyticsID', () => {
+    init({
+        ga: mockGA
+    });
+
+    expect(mockGA).not.toBeCalled();
+});
+
 test('init() should set global parameters from the given options', () => {
     const dimensions = {
         dimensionOne: 1,
