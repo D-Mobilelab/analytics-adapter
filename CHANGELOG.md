@@ -1,3 +1,7 @@
+## 3.1.0
+
+* Init method take analyticsID param to initialize GA library
+
 ## 3.0.1
 
 * Updated babel-eslint to 10.x.x
