@@ -1,3 +1,7 @@
+## 3.1.1
+
+* Fix global GA initialization
+
 ## 3.1.0
 
 * Init method take analyticsID param to initialize GA library

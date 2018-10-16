@@ -69,6 +69,8 @@ export default (options) => {
     if (options) {
         if (options.ga) {
             global.ga = options.ga;
+        } else {
+            global.ga = window.ga;
         }
 
         if (options.dimensions) {

@@ -1,5 +1,5 @@
 export default {
-    ga: window.ga,
+    ga: () => {},
     dimensions: {},
     enabled: true,
     logger: {
