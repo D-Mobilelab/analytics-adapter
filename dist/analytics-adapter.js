@@ -148,6 +148,10 @@ exports.default = function (options) {
             _global2.default.enabled = options.enabled === true || options.enabled === 'true' || options.enabled === 1 || options.enabled === '1';
         }
 
+        if (_global2.default.enabled && options.analyticsID) {
+            _global2.default.ga('create', options.analyticsID, 'auto');
+        }
+
         if (options.logger) {
             _global2.default.logger = options.logger;
         }
@@ -160,6 +164,8 @@ exports.default = function (options) {
     * @description Initialize Analytics and set up the general configurations.
     * @param {Object} options (see attributes below)
     * @param {boolean} [options.enabled=true] enable/disable tracking on Google Analytics
+    * @param {String} [options.analyticsID=null] analyticsID to initialize GA library
+    * (it is used for ga('create', analyticsID, 'auto'))
     * @param {Object} [options.logger=Object()] logging methods to use (see example below),
     * if undefined there will be no logs
     * @param {Object[]} [options.dimensions=Object()]
@@ -171,6 +177,7 @@ exports.default = function (options) {
     * // Analytics with console as logger
     *  AnalyticsAdapter.init({
     *      enabled: true,
+    *      analyticsID: 'UA-123456789-1',
     *      logger: console,
     *      dimensions: {
     *          'UserStatus': 1,
@@ -185,6 +192,7 @@ exports.default = function (options) {
     * // Analytics with no logs
     *  AnalyticsAdapter.init({
     *      enabled: true,
+    *      analyticsID: 'UA-123456789-1',
     *      dimensions: {
     *          'UserStatus': 1,
     *          'AccessType': 2,
